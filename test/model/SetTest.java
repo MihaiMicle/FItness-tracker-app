@@ -31,5 +31,15 @@ public class SetTest {
         assertEquals(4,set.getWeight());
     }
 
+    @Test
+    void testToString(){
+        Set set = new Set(1,1,1);
+
+        String result=set.toString();
+
+        assertTrue(result.contains("id=1"));
+        assertTrue(result.contains("reps=1"));
+        assertTrue(result.contains("weight=1"));
+    }
 }
 

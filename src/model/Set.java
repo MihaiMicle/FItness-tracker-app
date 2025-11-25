@@ -35,4 +35,12 @@ public class Set {
         this.weight = weight;
     }
 
+    @Override
+    public String toString() {
+        return "Set{" +
+                "id=" + id +
+                ", reps=" + reps +
+                ", weight=" + weight +
+                '}';
+    }
 }

@@ -1,13 +1,14 @@
 package model;
 
-import exception.ExerciseException;
 import java.util.*;
+import exception.RepositoryException;
+import repository.SetRepository;
 
 public class Exercise {
     private long id;
     private String name;
     private String targetedMuscle;
-    private ArrayList<Set> sets;
+    private SetRepository sets = new SetRepository();
 
 
     public Exercise(long id, String name, String targetedMuscle) {
@@ -40,12 +41,31 @@ public class Exercise {
         this.targetedMuscle = targetedMuscle;
     }
 
-    public ArrayList<Set> getSets() {
-        return sets;
+    public List<Set> getSets(){
+        return this.sets.getAll();
     }
 
-    public void setSets(ArrayList<Set> sets) {
-        this.sets = sets;
+    public void addSet(Set set){
+        this.sets.add(set);
     }
 
+    public void removeSet(int setNumber) throws RepositoryException {
+        this.sets.remove(setNumber);
+    }
+
+    public void updateSet(int setNumber, Set newSetData) throws RepositoryException {
+        this.sets.update(setNumber,newSetData);
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "Exercise{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", targetedMuscle='" + targetedMuscle + '\'' +
+                ", sets=" + sets.getAll() +
+                '}';
+    }
 }

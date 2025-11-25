@@ -45,10 +45,12 @@ class UserTest {
     void testSetters() {
         User user = new User(0, 0, 0, 0, 0, 0, LocalDate.now(), "", "", "", "", 0L);
 
+        user.setId(1);
         user.setUsername("jane_doe");
         user.setCurrentWeight(65);
         user.setCaloriesGoal(2000);
 
+        assertEquals(1, user.getId());
         assertEquals("jane_doe", user.getUsername());
         assertEquals(65, user.getCurrentWeight());
         assertEquals(2000, user.getCaloriesGoal());
