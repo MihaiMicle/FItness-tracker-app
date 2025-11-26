@@ -40,19 +40,19 @@ public class Workout {
         this.notes = notes;
     }
 
-    public List<Set> getExercises(){
+    public List<Exercise> getExercises(){
         return this.exercises.getAll();
     }
 
-    public void addSet(Exercise ex){
+    public void addExercise(Exercise ex){
         this.exercises.add(ex);
     }
 
-    public void removeSet(int exNumber) throws RepositoryException {
+    public void removeExercise(int exNumber) throws RepositoryException {
         this.exercises.remove(exNumber);
     }
 
-    public void updateSet(int exNumber, Exercise newExData) throws RepositoryException {
+    public void updateExercise(int exNumber, Exercise newExData) throws RepositoryException {
         this.exercises.update(exNumber,newExData);
     }
 

@@ -25,7 +25,7 @@ public abstract class AbstractRepository<T> {
         items.remove(index - 1);
     }
 
-    public List<Set> getAll() {
+    public List<T> getAll() {
         return items;
     }
 

@@ -64,7 +64,7 @@ public class Exercise {
         return "Exercise{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", targetedMuscle='" + targetedMuscle + '\'' +
+                ", targeted muscle='" + targetedMuscle + '\'' +
                 ", sets=" + sets.getAll() +
                 '}';
     }

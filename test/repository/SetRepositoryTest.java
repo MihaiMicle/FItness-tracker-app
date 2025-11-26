@@ -17,7 +17,7 @@ class SetRepositoryTest {
     }
 
     @Test
-    void testAddAndGetSets() {
+    void testAddAndGetAll() {
         Set set1 = new Set(1, 10, 50.0);
         repository.add(set1);
 

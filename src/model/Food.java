@@ -8,7 +8,7 @@ public class Food {
     private int carbs;
     private int fats;
 
-    public Food(int carbs, String name, int calories, int fats, int protein, long id) {
+    public Food(long id, String name, int calories, int protein, int carbs, int fats) {
         this.carbs = carbs;
         this.name = name;
         this.calories = calories;
@@ -63,5 +63,17 @@ public class Food {
 
     public void setFats(int fats) {
         this.fats = fats;
+    }
+
+    @Override
+    public String toString() {
+        return "Food{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", calories=" + calories +
+                ", protein=" + protein +
+                ", carbs=" + carbs +
+                ", fats=" + fats +
+                '}';
     }
 }

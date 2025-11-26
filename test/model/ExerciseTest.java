@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.*;
 
-public class ExerciseTest {
+public class    ExerciseTest {
     @Test
     void testConstructorAndGetters(){
         long id=1;
@@ -107,7 +107,7 @@ public class ExerciseTest {
         String result = exercise.toString();
 
         assertTrue(result.contains("name='Pull Up'"));
-        assertTrue(result.contains("targetedMuscle='Back'"));
+        assertTrue(result.contains("targeted muscle='Back'"));
         assertTrue(result.contains("id=1"));
         assertTrue(result.contains("reps=12"));
     }
